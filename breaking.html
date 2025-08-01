@@ -1,16 +1,17 @@
+```html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ब्रेकिंग न्यूज़ - देशमत न्यूज़</title>
   <link rel="icon" type="image/png" href="logo_deshmatnes.jpg">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <style>
-    body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fff; }
-    header, footer { background: #ff6600; color: white; padding: 10px 0; }
-    .nav-link { color: white; font-weight: bold; }
-    .nav-link:hover { color: black; }
+    body {font-family:'Noto Sans Devanagari', sans-serif; background:#fff;}
+    header, footer {background:#ff6600; color:white; padding:10px 0;}
+    .nav-link {color:white; font-weight:bold;}
+    .nav-link:hover {color:black;}
     .ticker {
       background: #000;
       color: #fff;
@@ -18,28 +19,34 @@
       overflow: hidden;
       position: relative;
       font-weight: bold;
+      white-space: nowrap;
     }
     .ticker span {
       display: inline-block;
-      padding-right: 60px;
-      white-space: nowrap;
-      animation: scroll 25s linear infinite;
+      padding-right: 80px;
+      animation: scroll 30s linear infinite;
     }
     @keyframes scroll {
       0% { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
     }
-    .headline-card { border: 2px solid #ff6600; border-radius: 8px; padding: 16px; margin-bottom: 16px; background: #1f1f1f; color: #fff; }
-    .headline-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
-    .badge-new { background: #ffeb3b; color: #000; font-weight: bold; }
-    .social-icons a { margin:0 8px; color:white; text-decoration:none; }
-    .meta { font-size: 0.85rem; opacity: 0.9; }
-    a { text-decoration: none; color: #ffa500; }
-    a:hover { text-decoration: underline; }
+    .breaking-item {
+      border-bottom:1px solid #eee;
+      padding:20px 0;
+    }
+    .breaking-item h3 {
+      color:#ff6600;
+      margin-bottom:6px;
+      font-size:1.25rem;
+    }
+    .meta {font-size:0.85rem; color:#555; margin-bottom:8px;}
+    .badge-new {background:#ffeb3b; color:#000; font-weight:bold; padding:4px 10px; border-radius:4px; font-size:0.75rem;}
+    a {text-decoration:none; color:#ff6600;}
+    a:hover {text-decoration:underline;}
+    .social-icons a {margin:0 8px; color:white; text-decoration:none;}
   </style>
 </head>
 <body>
-
   <!-- Header -->
   <header class="text-center">
     <div class="container d-flex justify-content-between align-items-center flex-wrap">
@@ -61,9 +68,9 @@
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="breaking.html">ब्रेकिंग न्यूज़</a></li>
+          <li class="nav-item"><a class="nav-link active" href="breaking.html">ब्रेकिंग न्यूज़</a></li>
           <li class="nav-item"><a class="nav-link" href="videos.html">वीडियो</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क करें</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क</a></li>
         </ul>
       </div>
     </div>
@@ -72,58 +79,86 @@
   <!-- Ticker -->
   <div class="ticker">
     <span>
-      रोहतास में दो पक्षों के बीच हिंसक झड़प में चली गोली! तनाव बढ़ा तो गांव में पुलिस कर रही कैंप • 
-      पटना AIIMS में आनंद मोहन के विधायक बेटे और बहू से भिड़े सुरक्षाकर्मी, आधी रात को हुआ भारी बवाल • 
-      हरी छोड़ पीली टोपी में महुआ पहुंचे तेजप्रताप यादव के रोड शो में बना तगड़ा माहौल, कर दिया बड़ा ऐलान • 
-      Bihar Airport: बिहार में इस एयरपोर्ट के लिए खोज ली गई 229 एकड़ जमीन, पर्यटकों के लिए भी आयी खुशखबरी
+      ड्यूटी से गायब थीं डॉक्टर... बेतिया के सरकारी अस्पताल में प्रसव के दौरान महिला की मौत • 
+      हरिवंश नारायण सिंह: बिहार SIR पर चर्चा क्यों नहीं? उपसभापति ने कारण बताए • 
+      पटना में दो बच्चों की हत्या, जली हुई लाशें मिलने से इलाके में तनाव • 
+      मुजफ्फरपुर में महावीर मेले के दौरान हिंसक झड़प, पथराव और पुलिस पर हमला • 
+      रोहतास में झड़प में गोली चली, गांव में पुलिस कैंप • 
+      पटना AIIMS में विधायक परिवार और सुरक्षाकर्मियों के बीच बवाल
     </span>
   </div>
 
   <!-- Content -->
   <div class="container py-4">
-    <h2 style="color:#ff6600;" class="mb-4 text-center">ताज़ा ब्रेकिंग बिहार न्यूज़</h2>
+    <h2 class="text-center" style="color:#ff6600; margin-bottom:30px;">ताज़ा ब्रेकिंग बिहार न्यूज़</h2>
 
-    <div class="headline-card">
-      <div class="d-flex justify-content-between align-items-start">
-        <div>
-          <h3>रोहतास में दो पक्षों के बीच हिंसक झड़प में चली गोली!</h3>
-          <p class="meta">स्थान: रोहतास | समय: अभी हाल ही में</p>
-          <p>दो पक्षों के बीच झड़प के दौरान गोली चली, तनाव बढ़ने पर गांव में पुलिस ने विशेष कैंप लगाया। स्थिति पर निगरानी जारी है।</p>
+    <!-- 1 -->
+    <div class="breaking-item">
+      <div class="d-flex justify-content-between align-items-start flex-wrap">
+        <div style="flex:1; min-width:250px;">
+          <h3>ड्यूटी से गायब थीं डॉक्टर... बेतिया के सरकारी अस्पताल में प्रसव के दौरान महिला की मौत</h3>
+          <p class="meta">01 अगस्त 2025 | बेतिया जिला, नरकटियागंज अस्पताल</p>
+          <p>बेतिया जिले के नरकटियागंज अस्पताल में प्रसव के दौरान 30 साल की महिला की मौत हो गई, जिससे अस्पताल में हंगामा और तोड़फोड़ मच गई। परिजनों ने ड्यूटी पर मौजूद डॉक्टर की गैरहाजिरी और लापरवाही का आरोप लगाया। नवजात की हालत गंभीर है। घटना ने सरकारी अस्पतालों की बदहाल व्यवस्था पर गंभीर सवाल खड़े किए हैं।</p>
         </div>
-        <div><span class="badge badge-new">ताज़ा</span></div>
+        <div><span class="badge-new">ताज़ा</span></div>
       </div>
     </div>
 
-    <div class="headline-card">
-      <div class="d-flex justify-content-between align-items-start">
-        <div>
+    <!-- 2 -->
+    <div class="breaking-item">
+      <div class="d-flex justify-content-between align-items-start flex-wrap">
+        <div style="flex:1; min-width:250px;">
+          <h3>Harivansh Narayan Singh: बिहार SIR पर चर्चा क्यों नहीं?</h3>
+          <p class="meta">01 अगस्त 2025 | राज्यसभा</p>
+          <p>आरजेडी के प्रोफेसर मनोज कुमार झा ने वोटर लिस्ट रिवीजन के मुद्दे पर राज्यसभा में चर्चा की मांग की थी। उपसभापति हरिवंश नारायण सिंह ने इसे अनुमति नहीं दी और सदन में विस्तार से बताया कि इस मुद्दे पर चर्चा क्यों संभव नहीं है।</p>
+        </div>
+        <div><span class="badge-new">विशेष</span></div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="breaking-item">
+      <div class="d-flex justify-content-between align-items-start flex-wrap">
+        <div style="flex:1; min-width:250px;">
+          <h3>पटना में दो बच्चों की हत्या, कमरे में जले शव मिलने से इलाका दहला</h3>
+          <p class="meta">01 अगस्त 2025 | पटना, जानीपुर</p>
+          <p>पटना के जानीपुर में दो मासूम बच्चों की एक ही कमरे में जली हालत में शव मिले। परिजनों का आरोप है कि यह सुनियोजित हत्या है। पुलिस ने घटना को हत्या मानते हुए जांच शुरू कर दी है। इलाके में भारी तनाव है और प्रदर्शन हो रहे हैं। फोरेंसिक और डॉग स्क्वॉड जांच में लगे हैं।</p>
+        </div>
+        <div><span class="badge-new">ताज़ा</span></div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="breaking-item">
+      <div class="d-flex justify-content-between align-items-start flex-wrap">
+        <div style="flex:1; min-width:250px;">
+          <h3>मुजफ्फरपुर में महावीर मेले के दौरान बवाल, हुई हिंसक झड़प</h3>
+          <p class="meta">01 अगस्त 2025 | मुजफ्फरपुर</p>
+          <p>महावीर मेले के दौरान दो पक्षों के बीच विवाद गहराया और पथराव व मारपीट हुई। स्थिति नियंत्रण में लाने गई पुलिस पर भी हमला हुआ। माहौल तनावपूर्ण रहा और दोनों पक्षों में झड़प के बाद इलाके में सुरक्षा बढ़ा दी गई है।</p>
+        </div>
+        <div><span class="badge-new">हाइलाइट</span></div>
+      </div>
+    </div>
+
+    <!-- 5 (optional earlier items) -->
+    <div class="breaking-item">
+      <div class="d-flex justify-content-between align-items-start flex-wrap">
+        <div style="flex:1; min-width:250px;">
+          <h3>रोहतास में दो पक्षों के बीच हिंसक झड़प में चली गोली</h3>
+          <p class="meta">हाल की घटना | रोहतास</p>
+          <p>दो पक्षों के बीच झड़प के दौरान गोली चली, तनाव बढ़ने पर गांव में पुलिस ने विशेष कैंप लगाया और हालात पर निगरानी जारी है।</p>
+        </div>
+        <div><span class="badge-new">ब्रेकिंग</span></div>
+      </div>
+    </div>
+    <div class="breaking-item">
+      <div class="d-flex justify-content-between align-items-start flex-wrap">
+        <div style="flex:1; min-width:250px;">
           <h3>पटना AIIMS में आनंद मोहन के विधायक बेटे और बहू से भिड़े सुरक्षाकर्मी</h3>
-          <p class="meta">स्थान: पटना | समय: आधी रात</p>
-          <p>आधी रात को सुरक्षाकर्मियों और विधायक परिवार के बीच भारी विवाद हुआ, अस्पताल में अफरा-तफरी मच गई। जांच शुरू।</p>
+          <p class="meta">हाल की घटना | पटना AIIMS</p>
+          <p>आधी रात को विधायक परिवार और सुरक्षाकर्मियों के बीच भारी विवाद हुआ, अस्पताल में अफरा-तफरी मच गई। जांच शुरू की गई है।</p>
         </div>
-        <div><span class="badge badge-new">ताज़ा</span></div>
-      </div>
-    </div>
-
-    <div class="headline-card">
-      <div class="d-flex justify-content-between align-items-start">
-        <div>
-          <h3>हरी छोड़ पीली टोपी में महुआ पहुंचे तेजप्रताप यादव के रोड शो में बना तगड़ा माहौल</h3>
-          <p class="meta">स्थान: बिहार | समय: अभी हाल ही में</p>
-          <p>तेजप्रताप यादव के रोड शो में भारी जनसमूह, उन्होंने बड़ा ऐलान किया और माहौल जोश से भर गया।</p>
-        </div>
-        <div><span class="badge badge-new">विशेष</span></div>
-      </div>
-    </div>
-
-    <div class="headline-card">
-      <div class="d-flex justify-content-between align-items-start">
-        <div>
-          <h3>Bihar Airport: 229 एकड़ जमीन खोजी गई</h3>
-          <p class="meta">स्थान: बिहार | समय: ताज़ा अपडेट</p>
-          <p>बिहार में एक नए एयरपोर्ट के लिए 229 एकड़ जमीन की पहचान की गई है, जिससे पर्यटन को बढ़ावा मिलेगा।</p>
-        </div>
-        <div><span class="badge badge-new">खुशखबरी</span></div>
+        <div><span class="badge-new">ब्रेकिंग</span></div>
       </div>
     </div>
 
@@ -144,3 +179,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+```
