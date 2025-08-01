@@ -78,7 +78,26 @@
     .inner-hero {background: linear-gradient(135deg,#ff6600,#000); color:white; padding:60px 20px;}
     .card-highlight {border:2px solid #ff6600;}
     .feedback {margin-top:10px;}
+    
   </style>
+  <!-- Fade In Animation CSS -->
+<style>
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 </head>
 <body>
   <header class="text-center">
@@ -161,35 +180,43 @@
   </div>
   
 
-     <!-- Political Submit 2025 - 35% Video, 65% Text Layout -->
+    <!-- Political Submit 2025 - Video + Text Layout (1920x480) -->
 <div class="container-fluid px-0 mb-5" style="max-width: 1920px; height: 480px; margin: 0 auto;">
   <div class="d-flex w-100 h-100" style="border: 4px double black; border-color: black orange;">
 
     <!-- Left Box: Video (35%) -->
-    <div style="flex: 0.35; position: relative; overflow: hidden;">
-      <iframe src="https://player.vimeo.com/video/1106486050?autoplay=1&muted=1"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-              frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen title="Political Submit 2025 Teaser">
-      </iframe>
+    <div style="flex: 0.35; position: relative; overflow: hidden; border-right: 4px solid orange;">
+      <div style="position: absolute; top: 10px; bottom: 10px; left: 10px; right: 10px; border: 5px solid black; border-radius: 8px; overflow: hidden;">
+        <iframe 
+          src="https://player.vimeo.com/video/1106486050?autoplay=1&muted=1"
+          style="width: 100%; height: 100%;" 
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture" 
+          allowfullscreen 
+          title="Political Submit 2025 Teaser">
+        </iframe>
+      </div>
     </div>
 
     <!-- Right Box: Text (65%) -->
-    <div style="flex: 0.65; background-color: white; padding: 30px; overflow-y: auto;">
-      <h4 class="fw-bold text-danger mb-3">राजनीतिक समिट 2025</h4>
-      <p class="text-dark" style="font-size: 1rem; line-height: 1.8; margin-bottom: 0;">
-        3 अगस्त 2025 को हाजीपुर के राज पैलेस में<br>
-        देश के प्रमुख राजनीतिक दलों के नेता या प्रतिनिधि भाग लेंगे<br>
-        यह आयोजन आम जनता और नेताओं के बीच संवाद का मंच है<br>
-        लोग अपने सवाल सीधे कार्यक्रम में रख सकेंगे<br>
-        चर्चा के विषय होंगे - विकास, शिक्षा, स्वास्थ्य, रोजगार<br>
-        आयोजन का उद्देश्य है पारदर्शी और जवाबदेही की राजनीति को बढ़ावा देना<br>
-        लाइव प्रसारण देशमत न्यूज़ के प्लेटफॉर्म पर उपलब्ध होगा
+    <div style="flex: 0.65; background-color: white; padding: 30px 40px; overflow-y: auto; animation: fadeIn 2s ease-in-out;">
+      <h4 class="fw-bold text-danger mb-3" style="animation: fadeInUp 1s ease-in-out;">राजनीतिक समिट 2025</h4>
+      <p class="text-dark" style="font-size: 1rem; line-height: 1.75; margin-bottom: 0; animation: fadeInUp 1.4s ease-in-out;">
+        आगामी 3 अगस्त 2025 को, बिहार के हाजीपुर में स्थित प्रतिष्ठित राज पैलेस में “राजनीतिक समिट 2025” का आयोजन किया जा रहा है।<br><br>
+        इस विशेष आयोजन में देश के विभिन्न प्रमुख राजनीतिक दलों के नेता, जनप्रतिनिधि और सामाजिक कार्यकर्ता भाग लेंगे।<br><br>
+        कार्यक्रम का मुख्य उद्देश्य जनता और नेताओं के बीच एक पारदर्शी संवाद स्थापित करना है, जहाँ लोग सीधे अपने प्रश्न नेताओं के समक्ष रख सकें।<br><br>
+        समिट में विकास, रोजगार, शिक्षा, स्वास्थ्य और सामाजिक न्याय जैसे ज्वलंत मुद्दों पर खुली चर्चा की जाएगी।<br><br>
+        यह कार्यक्रम राजनीति को उत्तरदायी और जनकेंद्रित बनाने की दिशा में एक महत्वपूर्ण कदम है।<br><br>
+        देशमत न्यूज़ चैनल इस आयोजन का सीधा प्रसारण करेगा।<br>
+        आइए, बदलाव की इस ऐतिहासिक पहल का हिस्सा बनें।
       </p>
     </div>
-
   </div>
 </div>
+
+
+
+
 
 
 
