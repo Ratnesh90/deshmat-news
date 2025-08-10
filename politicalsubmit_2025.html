@@ -13,6 +13,8 @@
     body {
       font-family: 'Noto Sans Devanagari', sans-serif;
       background: #fff;
+      margin: 0;
+      padding: 0;
     }
     header,
     footer {
@@ -25,6 +27,7 @@
       font-weight: bold;
       text-decoration: none;
       margin-right: 15px;
+      transition: color 0.3s ease;
     }
     nav a:hover {
       color: black;
@@ -46,55 +49,108 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
     .social-icons a:hover {
       text-decoration: underline;
       color: black;
     }
+
+    /* Video Slider */
     .video-slider {
       width: 100%;
-      height: 500px;
+      height: 360px; /* ~6 inch */
       overflow: hidden;
       position: relative;
+      margin-top: 0;
     }
     .video-slide iframe {
       width: 100%;
       height: 100%;
       border: none;
+      display: block;
     }
+
+    /* Event Description */
     .event-description {
-      padding: 40px;
+      padding: 40px 20px;
       max-width: 1100px;
-      margin: auto;
-      line-height: 1.8;
-      font-size: 1.1rem;
+      margin: 40px auto;
+      line-height: 1.9;
+      font-size: 1.2rem;
+      color: #222;
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+    }
+    .event-description h2 {
+      color: #d62828;
+      font-weight: 900;
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+      letter-spacing: 1.5px;
+    }
+    .event-description p {
+      margin-bottom: 20px;
+    }
+    .event-description p b {
+      color: #e63946;
+      font-weight: 700;
+    }
+    .event-description p[style] {
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
     }
     .cta-buttons {
-      margin-top: 20px;
+      margin-top: 30px;
     }
     .cta-buttons a {
       display: inline-block;
-      padding: 12px 24px;
-      margin-right: 15px;
-      font-size: 1rem;
-      border-radius: 6px;
+      padding: 14px 28px;
+      margin-right: 20px;
+      font-size: 1.1rem;
+      border-radius: 8px;
       text-decoration: none;
       color: white;
-      font-weight: bold;
+      font-weight: 800;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
     .btn-sponsor {
       background-color: #e63946;
     }
+    .btn-sponsor:hover {
+      background-color: #b32c36;
+      transform: scale(1.05);
+    }
     .btn-participate {
       background-color: #1d3557;
     }
+    .btn-participate:hover {
+      background-color: #15283e;
+      transform: scale(1.05);
+    }
+
     footer .container p,
     footer .container div,
     footer .container a {
       color: white;
+      margin: 6px 0;
     }
     footer .container a:hover {
       text-decoration: underline;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -132,7 +188,7 @@
     </div>
   </header>
 
-  <!-- Video Slider -->
+  <!-- Video Slider (right after header) -->
   <div class="video-slider">
     <div class="video-slide">
       <iframe
@@ -147,7 +203,7 @@
 
   <!-- Event Description -->
   <section class="event-description">
-    <h2 style="color:#d62828; font-weight:bold;">
+    <h2>
       राजनीतिक समिट 2025 - हाजीपुर से महुआ और सोनेपुर की ओर
     </h2>
     <p>
@@ -173,14 +229,7 @@
       हम सभी राजनीतिक प्रतिनिधियों, सामाजिक कार्यकर्ताओं, नागरिक संगठनों और
       प्रायोजकों से आग्रह करते हैं कि वे इस ऐतिहासिक पहल का हिस्सा बनें।
     </p>
-    <p>📞 संपर्क: <b>+91-XXXXXXXXXX</b> | ✉ <b>info@domain.com</b></p>
-
-    <div class="cta-buttons">
-      <a href="sponsor-form.html" class="btn-sponsor">Sponsor Now</a>
-      <a href="participant-registration.html" class="btn-participate"
-        >Register as Participant</a
-      >
-    </div>
+    <p>📞 संपर्क: <b>+91-96611 20120</b> | ✉ <b>teamdeshmat@gmail.com</b></p>
   </section>
 
   <!-- Footer (from breaking.html) -->
