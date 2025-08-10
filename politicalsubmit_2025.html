@@ -56,26 +56,30 @@
       color: black;
     }
 
-    /* Video Slider */
-    .video-slider {
-      width: 100%;
-      height: 660px; /* ~6 inch */
-      overflow: hidden;
-      position: relative;
-      margin-top: 0;
+    /* Responsive video container with border */
+    .video-container {
+      max-width: 1100px;
+      margin: 20px auto 30px auto;
+      border: 5px solid #ff6600;
+      border-radius: 12px;
+      padding: 8px;
+      box-sizing: border-box;
+      background: #000; /* optional black background behind video */
+      box-shadow: 0 0 15px rgba(255, 102, 0, 0.5);
     }
-    .video-slide iframe {
+    .video-container iframe {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 16 / 9;
       border: none;
       display: block;
+      border-radius: 8px;
     }
 
     /* Event Description */
     .event-description {
-      padding: 40px 20px;
+      padding: 30px 20px 40px 20px;
       max-width: 1100px;
-      margin: 40px auto;
+      margin: 0 auto 60px auto;
       line-height: 1.9;
       font-size: 1.2rem;
       color: #222;
@@ -101,36 +105,8 @@
       font-size: 1.3rem;
       letter-spacing: 0.05em;
     }
-    .cta-buttons {
-      margin-top: 30px;
-    }
-    .cta-buttons a {
-      display: inline-block;
-      padding: 14px 28px;
-      margin-right: 20px;
-      font-size: 1.1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      color: white;
-      font-weight: 800;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .btn-sponsor {
-      background-color: #e63946;
-    }
-    .btn-sponsor:hover {
-      background-color: #b32c36;
-      transform: scale(1.05);
-    }
-    .btn-participate {
-      background-color: #1d3557;
-    }
-    .btn-participate:hover {
-      background-color: #15283e;
-      transform: scale(1.05);
-    }
 
+    /* Footer styles */
     footer .container p,
     footer .container div,
     footer .container a {
@@ -152,10 +128,43 @@
         transform: translateY(0);
       }
     }
+
+    /* Responsive tweaks */
+    @media (max-width: 767px) {
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        margin-right: 10px;
+        font-size: 1rem;
+      }
+      .logo img {
+        height: 50px;
+        margin-bottom: 10px;
+      }
+      .social-icons a {
+        margin: 0 6px;
+        font-size: 0.9rem;
+      }
+      .event-description {
+        font-size: 1.05rem;
+        padding: 20px 15px 30px 15px;
+      }
+      .event-description h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+      .video-container {
+        margin: 15px 10px 25px 10px;
+        border-width: 3px;
+        padding: 5px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Header (from breaking.html) -->
+  <!-- Header -->
   <header>
     <div class="top-bar">
       <div class="logo">
@@ -188,17 +197,15 @@
     </div>
   </header>
 
-  <!-- Video Slider (right after header) -->
-  <div class="video-slider">
-    <div class="video-slide">
-      <iframe
-        loading="lazy"
-        src="https://www.youtube.com/embed/jAdknVPX3VE?si=sMj3OaH3zjskSfRc"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-        title="Political Submit 2025 Highlights"
-      ></iframe>
-    </div>
+  <!-- Video inside border frame -->
+  <div class="video-container">
+    <iframe
+      loading="lazy"
+      src="https://www.youtube.com/embed/jAdknVPX3VE?si=sMj3OaH3zjskSfRc"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+      title="Political Submit 2025 Highlights"
+    ></iframe>
   </div>
 
   <!-- Event Description -->
@@ -232,7 +239,7 @@
     <p>📞 संपर्क: <b>+91-96611 20120</b> | ✉ <b>teamdeshmat@gmail.com</b></p>
   </section>
 
-  <!-- Footer (from breaking.html) -->
+  <!-- Footer -->
   <footer class="text-center">
     <div class="container">
       <p>
