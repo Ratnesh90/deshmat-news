@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ब्रेकिंग देश - देशमत न्यूज़</title>
+  <link rel="icon" type="image/png" href="logo_deshmatnes.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {font-family:'Noto Sans Devanagari', sans-serif; background:#fff;}
+    header, footer {background:#ff6600; color:white; padding:10px 0;}
+    .nav-link {color:white; font-weight:bold;}
+    .nav-link:hover {color:black;}
+    .ticker {
+      background: #000;
+      color: #fff;
+      padding: 8px 12px;
+      overflow: hidden;
+      position: relative;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .ticker span {
+      display: inline-block;
+      padding-right: 80px;
+      animation: scroll 30s linear infinite;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .breaking-item {border-bottom:1px solid #eee; padding:20px 0;}
+    .breaking-item h3 {color:#ff6600; margin-bottom:6px; font-size:1.25rem;}
+    .meta {font-size:0.85rem; color:#555; margin-bottom:8px;}
+    .badge-new {background:#ffeb3b; color:#000; font-weight:bold; padding:4px 10px; border-radius:4px; font-size:0.75rem;}
+    a {text-decoration:none; color:#ff6600;}
+    a:hover {text-decoration:underline;}
+    .social-icons a {margin:0 8px; color:white; text-decoration:none;}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="text-center">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <div><a href="index.html"><img src="logo_deshmatnes.jpg" alt="देशमत न्यूज़ लोगो" height="60"></a></div>
+      <div><h1 class="mt-2">देशमत न्यूज़</h1></div>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@deshmatnews01" target="_blank" aria-label="YouTube">YouTube</a>
+        <a href="https://www.facebook.com/DeshMatNews01/" target="_blank" aria-label="Facebook">Facebook</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background:#000;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">होम</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="breaking.html">ब्रेकिंग न्यूज़</a></li>
+          <li class="nav-item"><a class="nav-link" href="videos.html">वीडियो</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Ticker -->
+  <div class="ticker">
+    <span>राजीव प्रताप रूडी ने कॉन्स्टिट्यूशन क्लब सचिव चुनाव में ढाई दशक से जारी दबदबा बरकरार रखा • अमित शाह, नड्डा, सोनिया, खरगे समेत कई दिग्गजों ने डाला वोट</span>
+  </div>
+
+  <!-- Breaking News Section -->
+  <div class="container py-4">
+    <h2 class="text-center" style="color:#ff6600; margin-bottom:30px;">ताज़ा ब्रेकिंग - कॉन्स्टिट्यूशन क्लब चुनाव</h2>
+
+    <div class="breaking-item">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <img src="rudy_ji.jpg" alt="राजीव प्रताप रूडी" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-7">
+          <h3>कॉन्स्टिट्यूशन क्लब के सचिव पद पर फिर बाज़ी मारी राजीव प्रताप रूडी ने</h3>
+          <p class="meta">12 अगस्त 2025 | नई दिल्ली</p>
+          <p>
+            नई दिल्ली की सियासत के सबसे हाई-प्रोफाइल चुनावों में से एक—कॉन्स्टिट्यूशन क्लब सचिव पद—में 
+            एक बार फिर बाज़ी मार ली <strong>राजीव प्रताप रूडी</strong> ने। भाजपा बनाम भाजपा की इस जंग में 
+            रूडी ने अपनी ही पार्टी के पूर्व सांसद और पूर्व केंद्रीय मंत्री <strong>संजीव बालियान</strong> को हराकर 
+            ढाई दशक से जारी अपना दबदबा बरकरार रखा।
+          </p>
+          <p>
+            इस बार का चुनाव कई मायनों में ऐतिहासिक रहा—पहली बार केवल डाक मत से ही नहीं, बल्कि 
+            <strong>अमित शाह, जेपी नड्डा, सोनिया गांधी, मल्लिकार्जुन खरगे</strong> जैसे सियासी दिग्गज भी वोट डालने पहुंचे।
+            इसे सत्ता के भीतर शक्ति संतुलन और सियासी हैसियत का सीधा संदेश माना जा रहा है।
+          </p>
+          <span class="badge-new">ब्रेकिंग</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p>© 2025 देशमत न्यूज़ | संपर्क करें: <a href="mailto:teamdeshmat@gmail.com" style="color:white;">teamdeshmat@gmail.com</a> | +91 96611 20120</p>
+      <div>
+        <a href="https://www.youtube.com/@deshmatnews01" target="_blank" style="color:white; margin-right:10px;">YouTube</a>
+        <a href="https://www.facebook.com/DeshMatNews01/" target="_blank" style="color:white;">Facebook</a>
+      </div>
+      <p style="margin-top:8px;">Developed by <a href="https://www.ivegtech.com" target="_blank" style="color:white; text-decoration:underline;">Ivegtech</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
