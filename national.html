@@ -62,6 +62,25 @@
     a {text-decoration:none; color:#ff6600;}
     a:hover {text-decoration:underline;}
     .social-icons a {margin:0 8px; color:white; text-decoration:none;}
+    /* Social Share Buttons */
+    .share-buttons {
+      margin: 30px 0;
+      text-align: center;
+    }
+    .share-buttons button {
+      background: #ff6600;
+      border: none;
+      color: white;
+      padding: 10px 18px;
+      margin: 0 10px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .share-buttons button:hover {
+      background: #e65c00;
+    }
   </style>
 </head>
 <body>
@@ -126,6 +145,13 @@
         </div>
       </div>
     </div>
+
+    <!-- Social Share Buttons -->
+    <div class="share-buttons" aria-label="Social share buttons">
+      <button onclick="shareFacebook()" aria-label="Facebook पर शेयर करें">Facebook</button>
+      <button onclick="shareTwitter()" aria-label="Twitter पर शेयर करें">Twitter</button>
+      <button onclick="shareWhatsApp()" aria-label="WhatsApp पर शेयर करें">WhatsApp</button>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -141,5 +167,26 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const pageUrl = encodeURIComponent('https://www.deshmat.in/breaking.html');
+    const pageTitle = encodeURIComponent('ब्रेकिंग देश - देशमत न्यूज़');
+    const pageText = encodeURIComponent('राजीव प्रताप रूडी ने कॉन्स्टिट्यूशन क्लब सचिव चुनाव में फिर बाज़ी मारी।');
+
+    function shareFacebook() {
+      const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+      window.open(facebookUrl, 'fbShareWindow', 'height=600,width=600,top=100,left=100,resizable=yes,scrollbars=yes');
+    }
+
+    function shareTwitter() {
+      const twitterUrl = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+      window.open(twitterUrl, 'twShareWindow', 'height=600,width=600,top=100,left=100,resizable=yes,scrollbars=yes');
+    }
+
+    function shareWhatsApp() {
+      const whatsappUrl = `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
+      window.open(whatsappUrl, 'waShareWindow');
+    }
+  </script>
 </body>
 </html>
