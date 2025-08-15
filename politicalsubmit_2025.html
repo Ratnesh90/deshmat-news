@@ -4,203 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Political Submit 2025</title>
+
+  <!-- Social Media Open Graph Meta Tags -->
+  <meta property="og:title" content="Political Submit 2025 Highlights" />
+  <meta property="og:description" content="राजनीतिक समिट 2025 - हाजीपुर से महुआ और सोनेपुर की ओर। कार्यक्रम की झलकियां देखें।" />
+  <meta property="og:image" content="https://img.youtube.com/vi/deTJxIZCl0w/maxresdefault.jpg" />
+  <meta property="og:url" content="https://www.deshmat.in/politicalsubmit_2025.html" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:video" content="https://www.youtube.com/embed/deTJxIZCl0w" />
+  <meta property="og:video:type" content="text/html" />
+  <meta property="og:video:width" content="1280" />
+  <meta property="og:video:height" content="720" />
+
   <style>
     /* Reset & base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Noto Sans Devanagari', sans-serif, sans-serif;
-      background: #fff;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fff; margin: 0; padding: 0; color: #222; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    a:hover { text-decoration: underline; }
 
     /* Header & footer */
-    header, footer {
-      background: #ff6600;
-      color: white;
-      padding: 10px 0;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
+    header, footer { background: #ff6600; color: white; padding: 10px 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+    .top-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .logo img { height: 60px; display: block; }
+    nav { flex-grow: 1; margin-left: 20px; }
+    nav a { color: white; font-weight: bold; margin-right: 15px; font-size: 1rem; display: inline-block; transition: color 0.3s ease; }
+    nav a:hover { color: black; }
+    .social-icons { display: flex; gap: 15px; }
+    .social-icons a { color: white; font-weight: bold; font-size: 1rem; transition: color 0.3s ease; }
+    .social-icons a:hover { color: black; }
 
-    /* Header flex container */
-    .top-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+    /* Video container */
+    .video-container { max-width: 1100px; height: 500px; margin: 20px auto 10px auto; border-top: 5px solid #ff6600; border-bottom: 5px solid #ff6600; background: #000; box-shadow: 0 0 15px rgba(255, 102, 0, 0.5); overflow: hidden; position: relative; }
+    .video-container iframe { width: 100%; height: 100%; border: none; display: block; }
 
-    /* Logo */
-    .logo img {
-      height: 60px;
-      display: block;
-    }
+    /* Share buttons */
+    .share-buttons { text-align: center; margin: 12px 0 25px 0; }
+    .share-buttons a { display: inline-block; padding: 8px 14px; margin: 0 5px; border-radius: 4px; font-size: 14px; color: white; text-decoration: none; }
+    .share-facebook { background: #1877f2; }
+    .share-whatsapp { background: #25d366; }
+    .share-buttons a:hover { opacity: 0.85; }
 
-    /* Navigation menu */
-    nav {
-      flex-grow: 1;
-      margin-left: 20px;
-    }
-    nav a {
-      color: white;
-      font-weight: bold;
-      margin-right: 15px;
-      font-size: 1rem;
-      display: inline-block;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: black;
-    }
-
-    /* Social icons on right */
-    .social-icons {
-      display: flex;
-      gap: 15px;
-    }
-    .social-icons a {
-      color: white;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
-    .social-icons a:hover {
-      color: black;
-    }
-
-    /* Video container with only top & bottom border */
-    .video-container {
-      max-width: 1100px;
-      height: 500px; /* ~5 inch */
-      margin: 20px auto 30px auto;
-      border-top: 5px solid #ff6600;
-      border-bottom: 5px solid #ff6600;
-      background: #000;
-      box-shadow: 0 0 15px rgba(255, 102, 0, 0.5);
-      overflow: hidden;
-      position: relative;
-    }
-    .video-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-      border-radius: 0;
-    }
-
-    /* Event Description */
-    .event-description {
-      max-width: 1100px;
-      margin: 0 auto 60px auto;
-      padding: 30px 20px 40px 20px;
-      font-size: 1.2rem;
-      animation: fadeInUp 1.2s ease forwards;
-      opacity: 0;
-    }
-    .event-description h2 {
-      color: #d62828;
-      font-weight: 900;
-      font-size: 2.4rem;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-      letter-spacing: 1.5px;
-    }
-    .event-description p {
-      margin-bottom: 20px;
-    }
-    .event-description p b {
-      color: #e63946;
-      font-weight: 700;
-    }
-    .event-description p[style] {
-      font-size: 1.3rem;
-      letter-spacing: 0.05em;
-    }
+    /* Event description */
+    .event-description { max-width: 1100px; margin: 0 auto 60px auto; padding: 30px 20px 40px 20px; font-size: 1.2rem; animation: fadeInUp 1.2s ease forwards; opacity: 0; }
+    .event-description h2 { color: #d62828; font-weight: 900; font-size: 2.4rem; margin-bottom: 30px; text-shadow: 1px 1px 3px rgba(0,0,0,0.1); letter-spacing: 1.5px; }
+    .event-description p { margin-bottom: 20px; }
+    .event-description p b { color: #e63946; font-weight: 700; }
+    .event-description p[style] { font-size: 1.3rem; letter-spacing: 0.05em; }
 
     /* Footer */
-    footer .container {
-      text-align: center;
-    }
-    footer .container p,
-    footer .container div,
-    footer .container a {
-      color: white;
-      margin: 6px 0;
-      font-size: 1rem;
-    }
-    footer .container div {
-      margin: 10px 0;
-    }
-    footer .container a {
-      display: inline-block;
-      margin: 0 8px;
-    }
+    footer .container { text-align: center; }
+    footer .container p, footer .container div, footer .container a { color: white; margin: 6px 0; font-size: 1rem; }
 
     /* Animation */
     @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(25px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(25px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     /* Responsive */
     @media (max-width: 767px) {
-      .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-      nav {
-        margin-left: 0;
-        width: 100%;
-      }
-      nav a {
-        margin-right: 10px;
-        font-size: 1rem;
-      }
-      .logo img {
-        height: 50px;
-      }
-      .social-icons {
-        width: 100%;
-        justify-content: flex-start;
-      }
-      .social-icons a {
-        font-size: 0.9rem;
-      }
-      .video-container {
-        height: 300px;
-        margin: 15px 10px 25px 10px;
-        border-width: 3px 0;
-      }
-      .event-description {
-        font-size: 1.05rem;
-        padding: 20px 15px 30px 15px;
-      }
-      .event-description h2 {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-      }
+      .top-bar { flex-direction: column; align-items: flex-start; gap: 10px; }
+      nav { margin-left: 0; width: 100%; }
+      nav a { margin-right: 10px; font-size: 1rem; }
+      .logo img { height: 50px; }
+      .social-icons { width: 100%; justify-content: flex-start; }
+      .video-container { height: 300px; margin: 15px 10px; border-width: 3px 0; }
+      .event-description { font-size: 1.05rem; padding: 20px 15px 30px 15px; }
+      .event-description h2 { font-size: 1.8rem; margin-bottom: 20px; }
     }
   </style>
 </head>
@@ -209,9 +81,7 @@
   <header>
     <div class="container top-bar">
       <div class="logo">
-        <a href="index.html"
-          ><img src="logo_deshmatnes.jpg" alt="देशमत न्यूज़ लोगो"
-        /></a>
+        <a href="index.html"><img src="logo_deshmatnes.jpg" alt="देशमत न्यूज़ लोगो" /></a>
       </div>
       <nav>
         <a href="index.html">होम</a>
@@ -220,64 +90,44 @@
         <a href="contact.html">संपर्क</a>
       </nav>
       <div class="social-icons">
-        <a href="https://www.youtube.com/@deshmatnews01" target="_blank" aria-label="YouTube">YouTube</a>
-        <a href="https://www.facebook.com/DeshMatNews01/" target="_blank" aria-label="Facebook">Facebook</a>
+        <a href="https://www.youtube.com/@deshmatnews01" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/DeshMatNews01/" target="_blank">Facebook</a>
       </div>
     </div>
   </header>
 
-  <!-- Video container -->
+  <!-- Video -->
   <div class="video-container">
-    <iframe
-      loading="lazy"
-      src="https://www.youtube.com/embed/jAdknVPX3VE?si=sMj3OaH3zjskSfRc"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen
-      title="Political Submit 2025 Highlights"
-    ></iframe>
+    <iframe loading="lazy" src="https://www.youtube.com/embed/deTJxIZCl0w?si=CYRB_IgLNkR9MNFb" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Political Submit 2025 Highlights"></iframe>
+  </div>
+
+  <!-- Share Buttons -->
+  <div class="share-buttons">
+    <a class="share-facebook" href="javascript:void(0);" onclick="shareOnFacebook()">📘 Facebook</a>
+    <a class="share-whatsapp" href="https://api.whatsapp.com/send?text=राजनीतिक%20समिट%202025%20-%20देखें:%20https://www.deshmat.in/politicalsubmit_2025.html" target="_blank">💬 WhatsApp</a>
   </div>
 
   <!-- Event Description -->
   <section class="event-description">
     <h2>राजनीतिक समिट 2025 - हाजीपुर से महुआ और सोनेपुर की ओर</h2>
     <p>
-      3 अगस्त 2025 को हाजीपुर के भव्य राज पैलेस में आयोजित “राजनीतिक समिट 2025”
-      ने ऐतिहासिक सफलता दर्ज की। इस आयोजन की शुरुआत सभी प्रमुख राजनीतिक दलों
-      के नेताओं के विशेष <b>पॉडकास्ट</b> से हुई, जिसमें विकास, रोजगार, शिक्षा,
-      स्वास्थ्य और सामाजिक न्याय जैसे विषयों पर गहन चर्चा हुई। शाम को, हाजीपुर के
-      विधायक <b>अवधेश कुमार</b> और अन्य प्रत्याशियों के बीच हुई खुली बहस ने माहौल
-      को और रोचक बना दिया।
+      3 अगस्त 2025 को हाजीपुर के भव्य राज पैलेस में आयोजित “राजनीतिक समिट 2025” ने ऐतिहासिक सफलता दर्ज की...
     </p>
-    <p>
-      इस कार्यक्रम की गूंज न सिर्फ सभागार तक सीमित रही, बल्कि सोशल मीडिया और
-      डिजिटल प्लेटफॉर्म्स पर इसके <b>लाखों व्यूज़</b> मिले, जिससे यह एक बड़े
-      पैमाने पर चर्चा का विषय बन गया।
-    </p>
-    <p>
-      अब, हम इस श्रृंखला को <b>महुआ विधानसभा</b> और <b>सोनेपुर विधानसभा</b> में
-      लेकर आ रहे हैं, जहाँ स्थानीय प्रतिनिधियों और सभी प्रमुख दलों के उम्मीदवारों के
-      साथ जनता सीधे सवाल-जवाब कर सकेगी। यह अवसर न केवल राजनीतिक जागरूकता को
-      बढ़ाएगा, बल्कि लोकतंत्र को और अधिक पारदर्शी बनाने में मदद करेगा।
-    </p>
-    <p style="color:#e63946; font-weight:bold;">
-      हम सभी राजनीतिक प्रतिनिधियों, सामाजिक कार्यकर्ताओं, नागरिक संगठनों और
-      प्रायोजकों से आग्रह करते हैं कि वे इस ऐतिहासिक पहल का हिस्सा बनें।
-    </p>
-    <p>📞 संपर्क: <b>+91-96611 20120</b> | ✉ <b>teamdeshmat@gmail.com</b></p>
   </section>
 
   <!-- Footer -->
   <footer class="text-center">
     <div class="container">
       <p>© 2025 देशमत न्यूज़ | संपर्क करें: <a href="mailto:teamdeshmat@gmail.com" style="color:white;">teamdeshmat@gmail.com</a> | +91 96611 20120</p>
-      <div>
-        <a href="https://www.youtube.com/@deshmatnews01" target="_blank" style="color:white;">YouTube</a>
-        <a href="https://www.facebook.com/DeshMatNews01/" target="_blank" style="color:white;">Facebook</a>
-      </div>
-      <p style="margin-top:8px;">Developed by <a href="https://www.ivegtech.com" target="_blank" style="color:white; text-decoration:underline;">Ivegtech</a></p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function shareOnFacebook() {
+      const url = "https://www.deshmat.in/politicalsubmit_2025.html";
+      const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+      window.open(fbShareUrl, "fbShareWindow", "height=450,width=650,top=" + (window.innerHeight/2 - 225) + ",left=" + (window.innerWidth/2 - 325) + ",toolbar=0,status=0");
+    }
+  </script>
 </body>
 </html>
