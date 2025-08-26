@@ -31,23 +31,23 @@
   }
   .news-story {
     margin-top: 30px;
-    overflow: hidden; /* ✅ यह इमेज को बाहर निकलने से रोकेगा */
+    overflow: hidden; /* ✅ इमेज बाहर नहीं निकलेगी */
   }
   .news-story h2 {
     color:#ff6600;
     margin-bottom:20px;
   }
   .news-img {
-    float: left;
+    float: left;        /* ✅ इमेज को बाएँ फिक्स कर दिया */
     margin-right: 20px;
     margin-bottom: 10px;
-    max-width: 250px;   /* ✅ छोटा कर दिया ताकि फुटर से पहले कंटेंट खत्म हो */
+    max-width: 250px;   /* ✅ इमेज की चौड़ाई लिमिट */
     border-radius: 8px;
   }
   .news-story::after {
     content: "";
     display: block;
-    clear: both; /* ✅ इससे footer इमेज के नीचे चला जाएगा */
+    clear: both; /* ✅ फुटर ओवरलैप नहीं करेगा */
   }
   p {text-align: justify;}
   .badge-new {
@@ -59,7 +59,6 @@
     font-size:0.85rem;
   }
 </style>
-
 </head>
 <body>
   <!-- Header -->
@@ -95,7 +94,6 @@
   <div class="ticker">
     <span>
       तेजस्वी यादव के क्षेत्र राघोपुर मे अपराधियों का तांडव • 
-
       पुलिस ने जल्द गिरफ्तारी का भरोसा दिलाया • 
     </span>
   </div>
