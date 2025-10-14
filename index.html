@@ -217,21 +217,21 @@
 </div>
 
   
-<!-- Political Program 2025 - Image + Text Layout (1920x480) -->
-<div class="container-fluid px-0 mb-5" style="max-width: 1920px; height: 480px; margin: 0 auto;">
-  <div class="d-flex w-100 h-100" style="border: 4px double black; border-color: black orange;">
+<!-- Political Program 2025 - Responsive Image + Text Layout -->
+<div class="container-fluid px-0 mb-5" style="max-width: 1920px; margin: 0 auto;">
+  <div class="d-flex flex-wrap w-100" style="border: 4px double black; border-color: black orange;">
 
-    <!-- Left Box: Image (35%) -->
-    <div style="flex: 0.35; position: relative; overflow: hidden; border-right: 4px solid orange; background-color: #000;">
-      <div style="position: absolute; top: 10px; bottom: 10px; left: 10px; right: 10px; border: 5px solid black; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+    <!-- Left Box: Image (auto height, full fit) -->
+    <div style="flex: 0.35; min-width: 300px; border-right: 4px solid orange; display: flex; align-items: center; justify-content: center; background-color: #000;">
+      <div style="margin: 10px; border: 5px solid black; border-radius: 8px; overflow: hidden; width: 100%; height: auto;">
         <img src="mike_janta.jpeg" 
              alt="माइक बनाम नेता – वोट की जंग मुद्दों के संग" 
-             style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+             style="width: 100%; height: auto; display: block; border-radius: 6px;">
       </div>
     </div>
 
-    <!-- Right Box: Text (65%) -->
-    <div style="flex: 0.65; background-color: white; padding: 30px 40px; overflow-y: auto; animation: fadeIn 2s ease-in-out;">
+    <!-- Right Box: Text (adaptive height) -->
+    <div style="flex: 0.65; background-color: white; padding: 30px 40px; overflow-y: auto; display: flex; flex-direction: column; justify-content: center;">
       <h4 class="fw-bold text-danger mb-3" style="animation: fadeInUp 1s ease-in-out;">
         अब हर विधानसभा में गूंजेगी जनता की आवाज़!
       </h4>
@@ -261,6 +261,7 @@
     </div>
   </div>
 </div>
+
 
 
 
