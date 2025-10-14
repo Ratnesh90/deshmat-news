@@ -110,6 +110,27 @@
     transform: translateY(0);
   }
 }
+
+  @keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeInRight {
+  from {opacity: 0; transform: translateX(50px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes zoomIn {
+  from {transform: scale(1);}
+  to {transform: scale(1.05);}
+}
+@keyframes textGlow {
+  0% { text-shadow: 0 0 5px orange, 0 0 10px red; }
+  100% { text-shadow: 0 0 15px orange, 0 0 25px red; }
+}
 </style>
 </head>
 <body>
@@ -217,25 +238,25 @@
 </div>
 
   
-<!-- Political Program 2025 - Responsive Image + Text Layout -->
+<!-- Political Program 2025 - Animated Image + Text Layout -->
 <div class="container-fluid px-0 mb-5" style="max-width: 1920px; margin: 0 auto;">
-  <div class="d-flex flex-wrap w-100" style="border: 4px double black; border-color: black orange;">
+  <div class="d-flex flex-wrap w-100 align-items-stretch" style="border: 4px double black; border-color: black orange; overflow: hidden;">
 
-    <!-- Left Box: Image (auto height, full fit) -->
-    <div style="flex: 0.35; min-width: 300px; border-right: 4px solid orange; display: flex; align-items: center; justify-content: center; background-color: #000;">
-      <div style="margin: 10px; border: 5px solid black; border-radius: 8px; overflow: hidden; width: 100%; height: auto;">
-        <img src="mike_janta.jpeg" 
+    <!-- Left Box: Image (Animated) -->
+    <div style="flex: 0.35; min-width: 300px; border-right: 4px solid orange; display: flex; align-items: center; justify-content: center; background-color: #000; position: relative; overflow: hidden;">
+      <div style="margin: 10px; border: 5px solid black; border-radius: 8px; overflow: hidden; width: 95%; animation: zoomIn 3s ease-in-out infinite alternate;">
+        <img src="images/mic-vs-neta.jpg" 
              alt="माइक बनाम नेता – वोट की जंग मुद्दों के संग" 
-             style="width: 100%; height: auto; display: block; border-radius: 6px;">
+             style="width: 100%; height: auto; display: block; border-radius: 6px; filter: brightness(1.05); animation: fadeIn 2s ease-in;">
       </div>
     </div>
 
-    <!-- Right Box: Text (adaptive height) -->
-    <div style="flex: 0.65; background-color: white; padding: 30px 40px; overflow-y: auto; display: flex; flex-direction: column; justify-content: center;">
-      <h4 class="fw-bold text-danger mb-3" style="animation: fadeInUp 1s ease-in-out;">
-        अब हर विधानसभा में गूंजेगी जनता की आवाज़!
+    <!-- Right Box: Text (Animated) -->
+    <div style="flex: 0.65; background-color: white; padding: 35px 45px; overflow-y: auto; display: flex; flex-direction: column; justify-content: center; animation: fadeInRight 2s ease-in-out;">
+      <h4 class="fw-bold mb-3 text-danger" style="font-size: 1.6rem; position: relative; animation: textGlow 2s ease-in-out infinite alternate;">
+        अब हर विधानसभा में गूंजेगी <span style="color: orange;">जनता की आवाज़!</span>
       </h4>
-      <p class="text-dark" style="font-size: 1rem; line-height: 1.75; margin-bottom: 0; animation: fadeInUp 1.4s ease-in-out;">
+      <p class="text-dark" style="font-size: 1rem; line-height: 1.75; margin-bottom: 0; animation: fadeInUp 2.5s ease-in-out;">
         🎤 <b>देशमत News</b> लेकर आ रहा है —  
         <span class="fw-bold text-danger">💥 “माइक बनाम नेता – वोट की जंग मुद्दों के संग” 💥</span><br><br>
 
@@ -261,6 +282,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 
