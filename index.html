@@ -112,24 +112,45 @@
 }
 
   @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 @keyframes fadeInRight {
-  from {opacity: 0; transform: translateX(50px);}
-  to {opacity: 1; transform: translateX(0);}
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 @keyframes fadeInUp {
-  from {opacity: 0; transform: translateY(30px);}
-  to {opacity: 1; transform: translateY(0);}
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 @keyframes zoomIn {
-  from {transform: scale(1);}
-  to {transform: scale(1.05);}
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
 }
 @keyframes textGlow {
-  0% { text-shadow: 0 0 5px orange, 0 0 10px red; }
-  100% { text-shadow: 0 0 15px orange, 0 0 25px red; }
+  0% { text-shadow: 0 0 5px orange, 0 0 10px red; color: #d62828; }
+  100% { text-shadow: 0 0 15px orange, 0 0 25px red; color: #ff4500; }
+}
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Fix */
+@media(max-width: 992px) {
+  .d-flex {
+    flex-direction: column !important;
+  }
+  .text-dark {
+    text-align: center;
+  }
+  h4 {
+    text-align: center;
+    font-size: 1.5rem !important;
+  }
+  .container-fluid {
+    padding: 10px;
+  }
 }
 </style>
 </head>
@@ -240,23 +261,37 @@
   
 <!-- Political Program 2025 - Animated Image + Text Layout -->
 <div class="container-fluid px-0 mb-5" style="max-width: 1920px; margin: 0 auto;">
-  <div class="d-flex flex-wrap w-100 align-items-stretch" style="border: 4px double black; border-color: black orange; overflow: hidden;">
+  <div class="d-flex flex-wrap w-100 align-items-stretch"
+       style="border: 4px double black; border-color: black orange; overflow: hidden;">
 
-    <!-- Left Box: Image (Animated) -->
-    <div style="flex: 0.35; min-width: 300px; border-right: 4px solid orange; display: flex; align-items: center; justify-content: center; background-color: #000; position: relative; overflow: hidden;">
-      <div style="margin: 10px; border: 5px solid black; border-radius: 8px; overflow: hidden; width: 95%; animation: zoomIn 3s ease-in-out infinite alternate;">
-        <img src="mike_janta.jpg" 
-             alt="माइक बनाम नेता – वोट की जंग मुद्दों के संग" 
-             style="width: 100%; height: auto; display: block; border-radius: 6px; filter: brightness(1.05); animation: fadeIn 2s ease-in;">
+    <!-- Left Box: Image (Animated & Fitted) -->
+    <div style="flex: 0.35; min-width: 320px; border-right: 4px solid orange;
+                display: flex; align-items: center; justify-content: center;
+                background-color: #000; position: relative; overflow: hidden;">
+      <div style="border: 5px solid black; border-radius: 8px; overflow: hidden;
+                  width: 360px; height: 670px; margin: 15px auto;
+                  animation: floatIn 1.2s ease-in-out, zoomIn 3s ease-in-out infinite alternate;">
+        <img src="images/mic-vs-neta.jpg"
+             alt="माइक बनाम नेता – वोट की जंग मुद्दों के संग"
+             style="width: 100%; height: 100%; object-fit: cover;
+                    border-radius: 6px; filter: brightness(1.08);
+                    animation: fadeIn 2s ease-in;">
       </div>
     </div>
 
     <!-- Right Box: Text (Animated) -->
-    <div style="flex: 0.65; background-color: white; padding: 35px 45px; overflow-y: auto; display: flex; flex-direction: column; justify-content: center; animation: fadeInRight 2s ease-in-out;">
-      <h4 class="fw-bold mb-3 text-danger" style="font-size: 1.6rem; position: relative; animation: textGlow 2s ease-in-out infinite alternate;">
+    <div style="flex: 0.65; background-color: white; padding: 40px 50px;
+                display: flex; flex-direction: column; justify-content: center;
+                overflow-y: auto; animation: fadeInRight 2s ease-in-out;">
+      <h4 class="fw-bold mb-3 text-danger"
+          style="font-size: 1.8rem; position: relative;
+                 animation: textGlow 2s ease-in-out infinite alternate;">
         अब हर विधानसभा में गूंजेगी <span style="color: orange;">जनता की आवाज़!</span>
       </h4>
-      <p class="text-dark" style="font-size: 1rem; line-height: 1.75; margin-bottom: 0; animation: fadeInUp 2.5s ease-in-out;">
+
+      <p class="text-dark"
+         style="font-size: 1rem; line-height: 1.8; margin-bottom: 0;
+                animation: fadeInUp 2.5s ease-in-out;">
         🎤 <b>देशमत News</b> लेकर आ रहा है —  
         <span class="fw-bold text-danger">💥 “माइक बनाम नेता – वोट की जंग मुद्दों के संग” 💥</span><br><br>
 
@@ -282,6 +317,7 @@
     </div>
   </div>
 </div>
+
 
 
 
